@@ -28,7 +28,6 @@ def timer_cost(time, cost, sequence):
     if time <= 0:
         return cost, sequence
     elif time in cost_table:
-        # ipdb.set_trace()
         sequence.extend(cost_table[time][1])
         return cost_table[time][0] + cost, sequence
     elif time in timers.values:
